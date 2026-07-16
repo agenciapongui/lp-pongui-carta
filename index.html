@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pongui — Tudo que você precisa saber sobre o meu trabalho está nesta página</title>
+<meta name="description" content="Tráfego pago exclusivo para advogados. Nesta página: o que eu faço, por que sua última experiência com tráfego decepcionou, pra quem serve (e pra quem não), números e como falar comigo.">
+<meta name="theme-color" content="#191919">
+<meta property="og:title" content="Pongui — Marketing Jurídico para Advogados">
+<meta property="og:description" content="Tudo que você precisa saber sobre o meu trabalho está nesta página.">
+<meta property="og:type" content="website">
+<meta property="og:image" content="https://agenciapongui.github.io/lp-pongui-carta/img/og.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500&family=Noto+Sans:ital,wght@0,400;0,600;0,700;1,400&family=Ubuntu:wght@700&display=swap" rel="stylesheet">
+
+
+<style>
+:root{
+  --bg:#191919; --txt:#f0efed; --mudo:#9b9a97; --branco:#ffffff;
+  --callout:#383836; --divisor:rgba(255,255,235,.1); --vermelho:#cf5148;
+  --azul:#0064dc; --azul2:#1565c0;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{animation:none!important;transition:none!important}}
+body{background:var(--bg);color:var(--txt);font-family:'Noto Sans',sans-serif;font-size:16px;line-height:1.5;-webkit-font-smoothing:antialiased}
+::selection{background:var(--azul2);color:#fff}
+img,video{max-width:100%;display:block}
+a{color:inherit}
+b,strong{color:var(--branco);font-weight:700}
+
+/* ---------- A COLUNA (720px, como a referência) ---------- */
+.carta{max-width:720px;margin:0 auto;padding:0 20px}
+
+/* ---------- RITMO ÚNICO DE BLOCOS: tudo respira igual ---------- */
+.carta p, .carta ul, .carta ol, .callout, .carta .ph, hr{margin-bottom:1.5em}
+.carta li{margin-bottom:.55em}
+.carta ul, .carta ol{list-style:none}
+
+/* ---------- HIERARQUIA (3 tamanhos, como a dela) ---------- */
+h1{font-family:'Oswald',sans-serif;font-weight:500;text-transform:uppercase;color:var(--branco);font-size:clamp(1.85rem,5.6vw,2.5rem);line-height:1.15;margin:2.2em 0 1em}
+.beat{font-size:1.5rem;font-weight:600;color:var(--branco);line-height:1.3;margin:2.4em 0 .9em}
+hr{border:0;height:1px;background:var(--divisor);margin-top:2.4em}
+
+/* ---------- CALLOUT (o bloco dela: #383836, raio 10, emoji ao lado) ---------- */
+.callout{display:flex;gap:12px;background:var(--callout);border-radius:10px;padding:15px 17px}
+.callout .emo{flex-shrink:0;font-size:1.25rem;line-height:1.4}
+.callout p{margin:0}
+
+/* ---------- LISTAS ✓ / ✕ / ↳ ---------- */
+.sim li,.nao li,.seta-l li{position:relative;padding-left:1.7rem}
+.sim li::before{content:"✓";position:absolute;left:0;color:var(--branco);font-weight:700}
+.nao li::before{content:"✕";position:absolute;left:0;color:var(--mudo);font-weight:700}
+.seta-l li::before{content:"↳";position:absolute;left:0;color:var(--mudo);font-weight:700}
+
+/* ---------- TEXTO VERMELHO (como a dela: sem caixa) ---------- */
+.red, .red b{color:var(--vermelho)}
+.red-lista li{position:relative;padding-left:1.7rem;color:var(--vermelho)}
+.red-lista li::before{content:counter(no)".";counter-increment:no;position:absolute;left:0;font-weight:700}
+.red-lista{counter-reset:no}
+
+/* ---------- BOTÃO (o azul real do site) ---------- */
+.btn{display:inline-block;font-family:'Ubuntu',sans-serif;font-weight:700;font-size:1.08rem;color:#fff;background:linear-gradient(180deg,var(--azul),var(--azul2));border:none;border-radius:13px;padding:16px 36px;text-decoration:none;text-align:center;cursor:pointer;transition:filter .18s}
+.btn:hover{filter:brightness(1.15)}
+.btn:focus-visible{outline:3px solid #fff;outline-offset:3px}
+
+/* ---------- PLACEHOLDERS ---------- */
+.ph{border-radius:10px;background:#232322;border:1px solid #2e2e2c;display:flex;align-items:center;justify-content:center;text-align:center;padding:16px;color:#8d8d8a;font-size:.72rem;font-weight:700;text-transform:uppercase;letter-spacing:.12em;line-height:1.8}
+.preencher{color:var(--branco);border-bottom:1px dashed var(--mudo)}
+.legenda{font-size:.84rem;color:var(--mudo);margin-top:-1em;margin-bottom:1.5em}
+.img-r{display:block;width:100%;height:auto;border-radius:10px;margin-bottom:1.5em;border:1px solid #2e2e2c}
+.prova-grid .img-r{margin-bottom:0}
+#foto-daniel{aspect-ratio:4/5;object-fit:cover;max-width:270px}
+.players-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-bottom:1.5em}
+.players-grid img{width:100%;height:auto;aspect-ratio:4/5;object-fit:cover;border-radius:10px;border:1px solid #2e2e2c;display:block}
+
+/* ---------- ELEMENTOS ESPECÍFICOS ---------- */
+#ph-forms{min-height:420px;flex-direction:column;gap:1.4rem}
+.prova-grid{display:grid;grid-template-columns:1fr 1fr 1fr;gap:14px;margin-bottom:.4em}
+.prova-grid .ph{aspect-ratio:4/5;margin:0}
+.prova-item.grande{grid-column:span 3}
+.prova-item.grande .ph{aspect-ratio:16/8}
+.prova-item .legenda{margin:.5em 0 0}
+@media(max-width:700px){.prova-grid{grid-template-columns:1fr}.prova-item.grande{grid-column:span 1}.prova-item.grande .ph{aspect-ratio:4/3}}
+.faq-q{font-weight:700;color:var(--branco);margin-bottom:.25em!important}
+.faq-r{position:relative;padding-left:1.7rem}
+.faq-r::before{content:"↳";position:absolute;left:0;color:var(--mudo);font-weight:700}
+.micro{font-size:.84rem;color:var(--mudo)}
+.micro b{color:var(--txt)}
+footer{border-top:1px solid var(--divisor);margin-top:64px;padding:36px 0 48px}
+.foot{display:flex;justify-content:space-between;gap:24px;flex-wrap:wrap;font-size:.8rem;color:#7d7c79;line-height:1.7}
+.foot a{color:#9b9a97;text-decoration:none}
+.foot a:hover{color:#fff}
+</style>
+</head>
+<body id="topo">
+
+<main class="carta">
+
+
+  <h1>Tudo que você precisa saber sobre o meu trabalho está nesta página.</h1>
+
+  <p>Deixa eu adivinhar: seu escritório fatura bem, você tem equipe — e tráfego pago você <b>já tentou</b>. Com agência ou por conta própria. O que voltou foi curioso no WhatsApp, relatório bonito de clique… e a sensação de dinheiro queimado. Até fechou um contrato ou outro, mas você sabe que dá pra muito mais do que isso.</p>
+  <p>Nesta página eu vou te mostrar exatamente <b>por que foi assim</b> — e o que muda quando a campanha é feita por quem só atende advogado. Lê até o fim: quando a gente conversar, você já vai saber de tudo.</p>
+
+  <hr>
+
+  <p class="beat">Agora, sobre o que eu faço…</p>
+  <div class="callout"><span class="emo">💡</span><p><b>Em marketês:</b> gestão de tráfego pago — Google e Meta Ads — exclusivamente para advogados: escolha estratégica de tese, página exclusiva, rastreamento por contrato fechado e acompanhamento do comercial. Tudo dentro do Provimento 205/2021 da OAB.</p></div>
+  <div class="callout"><span class="emo">💡</span><p><b>Em português:</b> eu pego o tráfego que já te decepcionou e transformo ele no canal mais previsível de contratos do seu escritório. Você para de torcer por indicação, seu time atende <b>lead qualificado</b> — e você constrói o nome de referência na sua tese, na sua região ou no Brasil inteiro.</p></div>
+  <p>Só que antes de você me classificar como "mais uma agência prometendo a mesma coisa", deixa eu te mostrar por que a sua última experiência com tráfego decepcionou.</p>
+
+  <hr>
+
+  <p>Provavelmente aconteceu de um desses dois jeitos.</p>
+  <p><b>Ou</b> você contratou uma agência que atende "todo mundo" — restaurante, clínica, advogado, tanto faz — e recebeu relatório bonito de alcance e clique enquanto o seu WhatsApp enchia de curioso pedindo consulta grátis.</p>
+  <p><b>Ou</b> você mesmo tocou as campanhas: aprendeu na marra, fechou uns contratos… até o escritório crescer e o tráfego virar um segundo emprego que você não tem mais tempo de fazer bem.</p>
+  <p>Nos dois casos, o final foi parecido: dinheiro queimado, time perdendo tempo com lead desqualificado — e a conclusão de que "tráfego não funciona pro meu nicho".</p>
+  <p>Só que o Google e o Meta funcionam. <b>O que estava errado era o que colocaram dentro deles</b> — três erros que ninguém te mostrou:</p>
+  <p><b>1.</b> Anúncio genérico ("precisa de advogado? fale conosco") atrai problema genérico. Curioso é o público mais barato da internet — e é exatamente ele que o anúncio genérico compra.</p>
+  <p><b>2.</b> Se ninguém ensinar diferente, o algoritmo otimiza pro evento mais barato: o <b>clique</b>. E clique é barato porque curioso clica muito. A campanha precisa ser ensinada a otimizar pelo único evento que paga boleto: <b>contrato fechado</b>.</p>
+  <p><b>3.</b> Sem escolha de tese, você briga no leilão mais caro com a mensagem mais fraca — competindo por "advogado" em vez de dominar a demanda de UM problema que o seu escritório resolve melhor que qualquer concorrente da região.</p>
+  <div class="callout"><span class="emo">📈</span><p>Quer ver o tamanho da diferença que isso faz? Um cliente nosso investiu <b>R$ 3,5 mil em Google Ads</b> — o mesmo leilão onde talvez você tenha queimado dinheiro — e faturou <b>R$ 257 mil em honorários</b>. Caso fora da curva? Sim. E eu vou te mostrar ele daqui a pouco <b>com o aviso que as outras agências não têm coragem de dar.</b></p></div>
+  <p>Por enquanto, guarda isso: quando o anúncio fecha só um contrato aqui e outro ali, isso é <b>sintoma</b> de uma máquina rodando a uma fração do potencial. E é por isso que a primeira coisa que eu faço num escritório é um diagnóstico — anúncio vem depois. É aqui que entra o método.</p>
+  <p>O nome dele é <b>CPC — Captação Previsível de Contratos</b>. Calma, doutor(a): eu sei que CPC pra você é outra coisa. Esse aqui é o nosso. Três pilares, nessa ordem, sempre:</p>
+  <p><b>Pilar 1 — Tese.</b> Antes de gastar um real em mídia, eu estudo seu escritório inteiro: caixa, êxito ou honorários iniciais, sua expertise, demanda e concorrência da sua região. Já mapeamos <b>43 nichos jurídicos</b> um por um pra fazer exatamente essa escolha. É o pilar que a agência generalista pula — e você acabou de ler o que acontece quando pulam.</p>
+  <p><b>Pilar 2 — Demanda.</b> Google e Meta Ads com página exclusiva da tese e rastreamento que ensina a campanha a otimizar pelo <b>contrato fechado</b>, em vez do clique. Criativos, relatório semanal e dashboard mensal inclusos.</p>
+  <p><b>Pilar 3 — Conversão.</b> O lead que chega no seu WhatsApp já passou pelo filtro da tese e da página — <b>seu time atende só quem tem o problema — o curioso morre no filtro.</b> E você recebe meu script de atendimento validado no jurídico, com acompanhamento do funil de fechamento.</p>
+  <p>E um combinado importante: aqui <b>não é você quem leva ideia pra agência</b>. Estratégia é entrega nossa — reunião estratégica mensal, relatório semanal e suporte direto no WhatsApp com a equipe. Se hoje uma alteração na sua campanha leva uma semana pra sair, o que você tem aí é um boleto com nome de agência.</p>
+  <p>Funciona pra qualquer escritório? Não. E é melhor eu te falar isso agora.</p>
+
+  <hr>
+
+  <p class="beat">🎯 Então vamos lá. Isso aqui é pra você que:</p>
+  <ul class="sim">
+    <li>já investiu em tráfego — com agência generalista ou por conta própria — e o que voltou foi curioso e relatório de clique;</li>
+    <li>fecha um contrato ou outro com anúncio e <b>sabe</b> que está rodando a uma fração do potencial;</li>
+    <li>toca as campanhas sozinho e isso virou um segundo emprego que você não tem mais tempo de fazer bem — e quer entregar pra um profissional de verdade, porque estagiário de agência aprendendo na sua verba você não aguenta de novo;</li>
+    <li>tem equipe pra atender o dobro de clientes — o gargalo é demanda qualificada chegando;</li>
+    <li>quer ser referência na sua tese — na sua cidade ou no Brasil inteiro.</li>
+  </ul>
+
+  <p class="beat">❌ Agora, deixa eu ser igualmente claro sobre quem fica de fora. Se você:</p>
+  <ul class="nao">
+    <li>está começando do zero, sem caixa e sem carteira — o método pressupõe um escritório já rodando;</li>
+    <li>não pode sustentar pelo menos <b>R$ 2 mil/mês de verba de mídia</b> (além do serviço) — campanha sem combustível não sai do lugar;</li>
+    <li>quer milagre em 30 dias — tese tem maturação, e quem promete isso está te enganando;</li>
+    <li>quer assinar o contrato e desaparecer do projeto — captação tem decisões que só o dono pode tomar —</li>
+  </ul>
+  <p><b>eu não sou a pessoa certa pra você.</b> E tá tudo bem: melhor descobrir isso aqui, de graça, do que seis meses depois.</p>
+  <p>Ficou? Então continua — porque agora vem a parte que você tem todo o direito de duvidar: os números. Inclusive aquele caso fora da curva.</p>
+
+  <hr>
+
+  <p class="beat">📈 Pra você confiar em mim, dá uma olhada no que a gente já construiu:</p>
+  <p><b>R$ 3.500 investidos em Google Ads → R$ 257 mil em honorários</b>, faturados no primeiro mês de campanha. É o nosso caso fora da curva — tese certa, na região certa, com ticket alto. Ele está aqui pra te mostrar até onde vai o <b>teto</b>. A média que eu sustento é outra: <b>piso de ROI 5×</b> nas contas ativas, normalmente acima de 10. Quem te mostra só o teto e esconde o piso está te vendendo loteria.</p>
+  <p><b>4+ anos atendendo SÓ advogado.</b> Recuso clínica, recuso e-commerce, recuso infoproduto. Especialista de verdade é quem abre mão do resto.</p>
+  <p><b>+70 escritórios</b> atendidos e <b>43 nichos jurídicos</b> mapeados um por um — sim, a gente contou.</p>
+  <p><b>Máximo de 3 escritórios novos por mês.</b> Operação enxuta de propósito: eu, minha sócia Gabriela na operação, Fernanda como gestora sênior e Pamella acompanhando cada cliente.</p>
+  <ul class="seta-l">
+    <li><span class="preencher">[ANO]</span>: comecei rodando tráfego para <span class="preencher">[contexto real do primeiro advogado]</span>;</li>
+    <li><span class="preencher">[ANO]</span>: decidi atender só o jurídico — e recuso todo o resto desde então;</li>
+    <li><span class="preencher">[ANO]</span>: <span class="preencher">[marco real com número]</span>;</li>
+    <li>Hoje: <span class="preencher">[estado atual com número]</span>.</li>
+  </ul>
+  <img class="img-r" id="foto-daniel" src="img/daniel.jpg" alt="Daniel Padilha, fundador da Pongui" width="800" height="1000" loading="lazy" decoding="async">
+  <p class="legenda">Daniel Padilha — fundador da Pongui.</p>
+  <p>Alguns dos parceiros que confiaram na Pongui:</p>
+  <img class="img-r" src="img/logos.png" alt="Logos de escritórios parceiros — são mais de 70 parceiros atendidos" width="1316" height="280" loading="lazy" decoding="async">
+  <p>Mas número falado é fácil — qualquer agência fala. Então deixa eu te mostrar os prints. Inclusive o do caso que eu te prometi lá em cima.</p>
+
+  <hr>
+
+  <p class="beat">👀 Veja você mesmo:</p>
+  <div class="prova-grid">
+    <div class="prova-item grande">
+      <img class="img-r" id="print-antonio" src="img/print-antonio.png" alt="Print do painel do Google Ads: R$ 3.547 investidos, e planilha com retorno de R$ 257.152,71 — 7.248%" width="1021" height="279" loading="lazy" decoding="async">
+      <p class="legenda">Cliente: advogado de <span class="preencher">[área]</span> · R$ 3.500 em Google Ads → R$ 257 mil em honorários no 1º mês</p>
+    </div>
+    <div class="prova-item"><img class="img-r" src="img/case-2.jpg" alt="Print de WhatsApp: 7 contratos fechados no mês, total de R$ 70.000 em faturamento" width="720" height="1280" loading="lazy" decoding="async"><p class="legenda">Cliente: advogado(a) de <span class="preencher">[área]</span></p></div>
+    <div class="prova-item"><img class="img-r" src="img/case-3.jpg" alt="Print de WhatsApp: primeiro caso fechado, valor da causa estimado em no mínimo R$ 500.000" width="720" height="1280" loading="lazy" decoding="async"><p class="legenda">Cliente: advogado(a) de <span class="preencher">[área]</span></p></div>
+    <div class="prova-item"><img class="img-r" src="img/case-4.jpg" alt="Print de WhatsApp: de 75 para 107 fechamentos em um mês" width="720" height="1280" loading="lazy" decoding="async"><p class="legenda">Cliente: advogado(a) de <span class="preencher">[área]</span></p></div>
+  </div>
+  <p>Não pedi avaliação "bonitinha" pra ninguém, tá? O que está aqui é print real e cliente real.</p>
+  <p>E uma regra minha: case de cliente não vira vitrine pra concorrente da mesma tese. Quando você for meu cliente, essa regra protege <b>você</b>.</p>
+  <p>E não são só os escritórios que confiam — olha quem mais coloca o nome ao lado do nosso trabalho:</p>
+  <div class="players-grid" id="players">
+    <img src="img/rayelle.jpg" alt="Dra. Rayelle Caroline" width="600" height="1066" loading="lazy" decoding="async">
+    <img src="img/vivian.jpg" alt="Dra. Vivian Padilha" width="600" height="1066" loading="lazy" decoding="async">
+    <img src="img/euro.jpg" alt="Dr. Euro Júnior" width="600" height="1066" loading="lazy" decoding="async">
+  </div>
+  <p class="legenda">Players que confiaram no nosso trabalho: Dra. Rayelle, Dra. Vivian e Dr. Euro.</p>
+  <p>E quando não estou nas contas, estou ali no palco: eventos do mercado jurídico, falando das mesmas estratégias que rodam nos escritórios que você acabou de ver.</p>
+  <img class="img-r" src="img/eventos.jpg" alt="Daniel Padilha palestrando em evento da OAB" width="1200" height="675" loading="lazy" decoding="async">
+  <p>Bom — se você chegou até aqui, já sabe tudo que precisava saber. Falta só o próximo passo. Mas antes dele, um último aviso.</p>
+
+  <hr>
+
+  <div id="formulario">
+    <p class="beat red">⚠️ ATENÇÃO — NÃO preencha se você:</p>
+    <ol class="red-lista">
+      <li>quer resultado garantido em 30 dias;</li>
+      <li>não é advogado(a) nem atua no mercado jurídico;</li>
+      <li>não pode sustentar a verba mínima de mídia;</li>
+      <li>só quer saber preço por curiosidade.</li>
+    </ol>
+    <p class="red"><em>(leia a lista vermelha antes de clicar)</em></p>
+  </div>
+  <p>Agora, se você leu até aqui e se reconheceu: o próximo passo é simples e não te compromete com nada. Preenche o formulário abaixo — são algumas perguntas sobre o seu escritório e sobre <b>o que você já tentou</b>. Com as respostas em mãos, <b>eu mesmo te chamo no WhatsApp</b> e a gente faz o diagnóstico dos seus números: por que a experiência anterior decepcionou, qual tese eu atacaria primeiro no seu caso e qual conta precisa fechar pra valer a pena. <b>Esse diagnóstico é seu — fica com ele mesmo que a gente não feche nada.</b> E se fizer sentido pros dois lados, aí sim eu te mostro o plano. Sem call, sem "reunião de alinhamento", sem compromisso disfarçado.</p>
+  <div class="ph" id="ph-forms">
+    <span>[FORMULÁRIO INTERATIVO DE QUALIFICAÇÃO — embed aqui]</span>
+    <span class="btn" role="presentation">QUERO PREVISIBILIDADE DE CONTRATOS</span>
+  </div>
+  <p class="micro">respondo em horário comercial · <b>máximo 3 escritórios novos por mês</b> — quando a 3ª vaga fecha, é fila</p>
+
+  <hr>
+
+  <p class="beat">❓ Ainda com uma dúvida na cabeça? Deve ser uma dessas:</p>
+  <p class="faq-q">Já tentei tráfego e não funcionou. Por que com vocês seria diferente?</p>
+  <p class="faq-r">Porque provavelmente ninguém tratou os três erros da seção lá de cima: anúncio genérico, otimização por clique e ausência de tese. E isso quem responde é o diagnóstico que eu faço nos seus números, antes de você decidir qualquer coisa. Se a sua conta anterior estava certa e o problema era outro, eu te falo isso também.</p>
+  <p class="faq-q">Não sei se o meu público está no Google e no Meta.</p>
+  <p class="faq-r">Está. Quem tem problema jurídico hoje pesquisa antes até de pedir indicação — o Google captura quem digita o problema; o Meta encontra quem tem o perfil de quem o vive. Em 4+ anos e 43 nichos mapeados, eu ainda não encontrei tese sem demanda digital — encontrei muita tese anunciada errado. E se o seu caso for a exceção, o diagnóstico mostra isso <b>antes</b> de você gastar um real. Eu te falo.</p>
+  <p class="faq-q">Vocês garantem resultado?</p>
+  <p class="faq-r">Não. E desconfia de quem garante. O que eu sustento com dado: piso de ROI 5× nas contas ativas, normalmente acima de 10 — e o caso fora da curva você já viu, com o devido aviso.</p>
+  <p class="faq-q">Eu preciso participar do projeto?</p>
+  <p class="faq-r">Precisa — mas calma, do operacional não: campanha, página, criativo e otimização são entrega minha. O que eu preciso de você são as decisões de tese, a validação da estratégia e um comercial atendendo rápido. Projeto de captação com dono ausente morre — e eu já vi morrer. Se o seu momento é de sumir por seis meses, melhor não começar.</p>
+  <p class="faq-q">Preciso gravar vídeo?</p>
+  <p class="faq-r">Não é obrigatório — rodamos com criativos de imagem feitos por nós. Vídeo performa melhor, então se topar gravar, você manda o material cru e corte, legenda e trilha são por minha conta.</p>
+  <p class="faq-q">Qual é o investimento?</p>
+  <p class="faq-r">Eu não passo preço em página, e o motivo é simples: o plano certo depende do diagnóstico do seu escritório. A conta que importa é outra: <b>quantos contratos por mês pagam o investimento inteiro.</b> Essa conta eu faço COM você, com os seus números de honorário, antes de você decidir qualquer coisa.</p>
+
+  <hr>
+
+  <p>Sem mais dúvidas? Então agora é com você.</p>
+  <p style="font-size:1.15rem"><b>Te espero do outro lado!</b><br>Um abraço, <b>Daniel.</b></p>
+  <p><a class="btn" id="btn-final" href="#formulario">QUERO PREVISIBILIDADE DE CONTRATOS</a></p>
+
+</main>
+
+<footer>
+  <div class="carta foot">
+    <span>© 2026 Pongui Marketing Digital LTDA · CNPJ 47.143.662/0001-84<br>Q 3 Lote 620/640, Ed. Rossi Speciale, Apto 107 · Brasília/DF — CEP 72445-030</span>
+    <span><a href="https://www.instagram.com/agenciapongui/" target="_blank" rel="noopener">Instagram</a> · <a href="https://www.linkedin.com/company/agencia-pongui/" target="_blank" rel="noopener">LinkedIn</a></span>
+  </div>
+</footer>
+
+</body>
+</html>
