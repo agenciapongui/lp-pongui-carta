@@ -76,7 +76,6 @@ hr{border:0;height:1px;background:var(--divisor);margin-top:2.4em}
 .players-grid img{width:100%;height:auto;aspect-ratio:4/5;object-fit:cover;border-radius:10px;border:1px solid #2e2e2c;display:block}
 
 /* ---------- ELEMENTOS ESPECÍFICOS ---------- */
-#ph-forms{min-height:420px;flex-direction:column;gap:1.4rem}
 .prova-grid{display:grid;grid-template-columns:1fr 1fr 1fr;gap:14px;margin-bottom:.4em}
 .prova-grid .ph{aspect-ratio:4/5;margin:0}
 .prova-item.grande{grid-column:span 3}
@@ -207,11 +206,8 @@ footer{border-top:1px solid var(--divisor);margin-top:64px;padding:36px 0 48px}
     </ol>
     <p class="red"><em>(leia a lista vermelha antes de clicar)</em></p>
   </div>
-  <p>Agora, se você leu até aqui e se reconheceu: o próximo passo é simples e não te compromete com nada. Preenche o formulário abaixo — são algumas perguntas sobre o seu escritório e sobre <b>o que você já tentou</b>. Com as respostas em mãos, <b>eu mesmo te chamo no WhatsApp</b> e a gente faz o diagnóstico dos seus números: por que a experiência anterior decepcionou, qual tese eu atacaria primeiro no seu caso e qual conta precisa fechar pra valer a pena. <b>Esse diagnóstico é seu — fica com ele mesmo que a gente não feche nada.</b> E se fizer sentido pros dois lados, aí sim eu te mostro o plano. Sem call, sem "reunião de alinhamento", sem compromisso disfarçado.</p>
-  <div class="ph" id="ph-forms">
-    <span>[FORMULÁRIO INTERATIVO DE QUALIFICAÇÃO — embed aqui]</span>
-    <span class="btn" role="presentation">QUERO PREVISIBILIDADE DE CONTRATOS</span>
-  </div>
+  <p>Agora, se você leu até aqui e se reconheceu: o próximo passo é simples e não te compromete com nada. Clica no botão abaixo e preenche o formulário — são algumas perguntas sobre o seu escritório e sobre <b>o que você já tentou</b>. Com as respostas em mãos, <b>eu mesmo te chamo no WhatsApp</b> e a gente faz o diagnóstico dos seus números: por que a experiência anterior decepcionou, qual tese eu atacaria primeiro no seu caso e qual conta precisa fechar pra valer a pena. <b>Esse diagnóstico é seu — fica com ele mesmo que a gente não feche nada.</b> E se fizer sentido pros dois lados, aí sim eu te mostro o plano. Sem call, sem "reunião de alinhamento", sem compromisso disfarçado.</p>
+  <p style="text-align:center;margin-bottom:1.5em"><a class="btn" id="btn-forms" href="#formulario">QUERO PREVISIBILIDADE DE CONTRATOS</a></p>
   <p class="micro">respondo em horário comercial · <b>máximo 3 escritórios novos por mês</b> — quando a 3ª vaga fecha, é fila</p>
 
   <hr>
@@ -235,6 +231,15 @@ footer{border-top:1px solid var(--divisor);margin-top:64px;padding:36px 0 48px}
   <p>Sem mais dúvidas? Então agora é com você.</p>
   <p style="font-size:1.15rem"><b>Te espero do outro lado!</b><br>Um abraço, <b>Daniel.</b></p>
   <p><a class="btn" id="btn-final" href="#formulario">QUERO PREVISIBILIDADE DE CONTRATOS</a></p>
+
+  <script>
+  /* URL do formulário interativo: preencher aqui quando existir */
+  var FORM_URL = "";
+  if (FORM_URL) {
+    document.getElementById("btn-forms").href = FORM_URL;
+    document.getElementById("btn-final").href = FORM_URL;
+  }
+  </script>
 
 </main>
 
