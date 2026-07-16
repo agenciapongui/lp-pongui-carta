@@ -71,7 +71,9 @@ hr{border:0;height:1px;background:var(--divisor);margin-top:2.4em}
 .legenda{font-size:.84rem;color:var(--mudo);margin-top:-1em;margin-bottom:1.5em}
 .img-r{display:block;width:100%;height:auto;border-radius:10px;margin-bottom:1.5em;border:1px solid #2e2e2c}
 .prova-grid .img-r{margin-bottom:0}
-#foto-daniel{aspect-ratio:4/5;object-fit:cover;max-width:270px}
+#foto-daniel{aspect-ratio:4/5;object-fit:cover;width:320px;max-width:100%;margin-left:auto;margin-right:auto}
+#foto-daniel + .legenda{text-align:center}
+.logos-band{display:block;width:min(94vw,1040px);max-width:none;height:auto;margin-left:50%;transform:translateX(-50%);margin-bottom:1.5em;border-radius:10px}
 .players-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-bottom:1.5em}
 .players-grid img{width:100%;height:auto;aspect-ratio:4/5;object-fit:cover;border-radius:10px;border:1px solid #2e2e2c;display:block}
 
@@ -145,7 +147,7 @@ footer{border-top:1px solid var(--divisor);margin-top:64px;padding:36px 0 48px}
     <li>está começando do zero, sem caixa e sem carteira — o método pressupõe um escritório já rodando;</li>
     <li>não pode sustentar pelo menos <b>R$ 2 mil/mês de verba de mídia</b> (além do serviço) — campanha sem combustível não sai do lugar;</li>
     <li>quer milagre em 30 dias — tese tem maturação, e quem promete isso está te enganando;</li>
-    <li>quer assinar o contrato e desaparecer do projeto — captação tem decisões que só o dono pode tomar —</li>
+    <li>quer assinar o contrato e desaparecer do projeto — captação tem decisões que só o dono pode tomar.</li>
   </ul>
   <p><b>eu não sou a pessoa certa pra você.</b> E tá tudo bem: melhor descobrir isso aqui, de graça, do que seis meses depois.</p>
   <p>Ficou? Então continua — porque agora vem a parte que você tem todo o direito de duvidar: os números. Inclusive aquele caso fora da curva.</p>
@@ -156,17 +158,16 @@ footer{border-top:1px solid var(--divisor);margin-top:64px;padding:36px 0 48px}
   <p><b>R$ 3.500 investidos em Google Ads → R$ 257 mil em honorários</b>, faturados no primeiro mês de campanha. É o nosso caso fora da curva — tese certa, na região certa, com ticket alto. Ele está aqui pra te mostrar até onde vai o <b>teto</b>. A média que eu sustento é outra: <b>piso de ROI 5×</b> nas contas ativas, normalmente acima de 10. Quem te mostra só o teto e esconde o piso está te vendendo loteria.</p>
   <p><b>4+ anos atendendo SÓ advogado.</b> Recuso clínica, recuso e-commerce, recuso infoproduto. Especialista de verdade é quem abre mão do resto.</p>
   <p><b>+70 escritórios</b> atendidos e <b>43 nichos jurídicos</b> mapeados um por um — sim, a gente contou.</p>
-  <p><b>Máximo de 3 escritórios novos por mês.</b> Operação enxuta de propósito: eu, minha sócia Gabriela na operação, Fernanda como gestora sênior e Pamella acompanhando cada cliente.</p>
+  <p><b>Máximo de 3 escritórios novos por mês.</b> Operação enxuta de propósito com apenas 5 pessoas no time. Escolhemos de verdade qual cliente entra na casa.</p>
   <ul class="seta-l">
-    <li><span class="preencher">[ANO]</span>: comecei rodando tráfego para <span class="preencher">[contexto real do primeiro advogado]</span>;</li>
-    <li><span class="preencher">[ANO]</span>: decidi atender só o jurídico — e recuso todo o resto desde então;</li>
-    <li><span class="preencher">[ANO]</span>: <span class="preencher">[marco real com número]</span>;</li>
-    <li>Hoje: <span class="preencher">[estado atual com número]</span>.</li>
+    <li>2021: comecei cuidando do tráfego para um escritório grande, do Dr. Euro Júnior;</li>
+    <li>2022: decidi atender só o jurídico — e recuso todo o resto desde então;</li>
+    <li>Hoje: já temos mais de 20 teses jurídicas validadas fechando contrato e com ROI de 5x no mínimo.</li>
   </ul>
   <img class="img-r" id="foto-daniel" src="img/daniel.jpg" alt="Daniel Padilha, fundador da Pongui" width="800" height="1000" loading="lazy" decoding="async">
   <p class="legenda">Daniel Padilha — fundador da Pongui.</p>
   <p>Alguns dos parceiros que confiaram na Pongui:</p>
-  <img class="img-r" src="img/logos.png" alt="Logos de escritórios parceiros — são mais de 70 parceiros atendidos" width="1316" height="280" loading="lazy" decoding="async">
+  <img class="logos-band" src="img/logos.png" alt="Logos de escritórios parceiros — são mais de 70 parceiros atendidos" width="1316" height="280" loading="lazy" decoding="async">
   <p>Mas número falado é fácil — qualquer agência fala. Então deixa eu te mostrar os prints. Inclusive o do caso que eu te prometi lá em cima.</p>
 
   <hr>
@@ -175,11 +176,11 @@ footer{border-top:1px solid var(--divisor);margin-top:64px;padding:36px 0 48px}
   <div class="prova-grid">
     <div class="prova-item grande">
       <img class="img-r" id="print-antonio" src="img/print-antonio.png" alt="Print do painel do Google Ads: R$ 3.547 investidos, e planilha com retorno de R$ 257.152,71 — 7.248%" width="1021" height="279" loading="lazy" decoding="async">
-      <p class="legenda">Cliente: advogado de <span class="preencher">[área]</span> · R$ 3.500 em Google Ads → R$ 257 mil em honorários no 1º mês</p>
+      <p class="legenda">Cliente: advogado imobiliário · R$ 3.500 em Google Ads → R$ 257 mil em honorários no 1º mês</p>
     </div>
-    <div class="prova-item"><img class="img-r" src="img/case-2.jpg" alt="Print de WhatsApp: 7 contratos fechados no mês, total de R$ 70.000 em faturamento" width="720" height="1280" loading="lazy" decoding="async"><p class="legenda">Cliente: advogado(a) de <span class="preencher">[área]</span></p></div>
-    <div class="prova-item"><img class="img-r" src="img/case-3.jpg" alt="Print de WhatsApp: primeiro caso fechado, valor da causa estimado em no mínimo R$ 500.000" width="720" height="1280" loading="lazy" decoding="async"><p class="legenda">Cliente: advogado(a) de <span class="preencher">[área]</span></p></div>
-    <div class="prova-item"><img class="img-r" src="img/case-4.jpg" alt="Print de WhatsApp: de 75 para 107 fechamentos em um mês" width="720" height="1280" loading="lazy" decoding="async"><p class="legenda">Cliente: advogado(a) de <span class="preencher">[área]</span></p></div>
+    <div class="prova-item"><img class="img-r" src="img/case-2.jpg" alt="Print de WhatsApp: 7 contratos fechados no mês, total de R$ 70.000 em faturamento" width="720" height="1280" loading="lazy" decoding="async"><p class="legenda">Cliente: advogado bancário</p></div>
+    <div class="prova-item"><img class="img-r" src="img/case-3.jpg" alt="Print de WhatsApp: primeiro caso fechado, valor da causa estimado em no mínimo R$ 500.000" width="720" height="1280" loading="lazy" decoding="async"><p class="legenda">Cliente: advogado trabalhista</p></div>
+    <div class="prova-item"><img class="img-r" src="img/case-4.jpg" alt="Print de WhatsApp: de 75 para 107 fechamentos em um mês" width="720" height="1280" loading="lazy" decoding="async"><p class="legenda">Cliente: advogado de trânsito</p></div>
   </div>
   <p>Não pedi avaliação "bonitinha" pra ninguém, tá? O que está aqui é print real e cliente real.</p>
   <p>E uma regra minha: case de cliente não vira vitrine pra concorrente da mesma tese. Quando você for meu cliente, essa regra protege <b>você</b>.</p>
@@ -206,9 +207,7 @@ footer{border-top:1px solid var(--divisor);margin-top:64px;padding:36px 0 48px}
     </ol>
     <p class="red"><em>(leia a lista vermelha antes de clicar)</em></p>
   </div>
-  <p>Agora, se você leu até aqui e se reconheceu: o próximo passo é simples e não te compromete com nada. Clica no botão abaixo e preenche o formulário — são algumas perguntas sobre o seu escritório e sobre <b>o que você já tentou</b>. Com as respostas em mãos, <b>eu mesmo te chamo no WhatsApp</b> e a gente faz o diagnóstico dos seus números: por que a experiência anterior decepcionou, qual tese eu atacaria primeiro no seu caso e qual conta precisa fechar pra valer a pena. <b>Esse diagnóstico é seu — fica com ele mesmo que a gente não feche nada.</b> E se fizer sentido pros dois lados, aí sim eu te mostro o plano. Sem call, sem "reunião de alinhamento", sem compromisso disfarçado.</p>
-  <p style="text-align:center;margin-bottom:1.5em"><a class="btn" id="btn-forms" href="#formulario">QUERO PREVISIBILIDADE DE CONTRATOS</a></p>
-  <p class="micro">respondo em horário comercial · <b>máximo 3 escritórios novos por mês</b> — quando a 3ª vaga fecha, é fila</p>
+  <p style="text-align:center;margin-bottom:1.5em"><a class="btn" id="btn-forms" href="#formulario">FALE COMIGO</a></p>
 
   <hr>
 
@@ -230,15 +229,11 @@ footer{border-top:1px solid var(--divisor);margin-top:64px;padding:36px 0 48px}
 
   <p>Sem mais dúvidas? Então agora é com você.</p>
   <p style="font-size:1.15rem"><b>Te espero do outro lado!</b><br>Um abraço, <b>Daniel.</b></p>
-  <p><a class="btn" id="btn-final" href="#formulario">QUERO PREVISIBILIDADE DE CONTRATOS</a></p>
 
   <script>
   /* URL do formulário interativo: preencher aqui quando existir */
   var FORM_URL = "";
-  if (FORM_URL) {
-    document.getElementById("btn-forms").href = FORM_URL;
-    document.getElementById("btn-final").href = FORM_URL;
-  }
+  if (FORM_URL) { document.getElementById("btn-forms").href = FORM_URL; }
   </script>
 
 </main>
