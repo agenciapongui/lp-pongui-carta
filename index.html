@@ -71,11 +71,14 @@ hr{border:0;height:1px;background:var(--divisor);margin-top:2.4em}
 .legenda{font-size:.84rem;color:var(--mudo);margin-top:-1em;margin-bottom:1.5em}
 .img-r{display:block;width:100%;height:auto;border-radius:10px;margin-bottom:1.5em;border:1px solid #2e2e2c}
 .prova-grid .img-r{margin-bottom:0}
-#foto-daniel{aspect-ratio:4/5;object-fit:cover;width:320px;max-width:100%;margin-left:auto;margin-right:auto}
+#foto-daniel{width:380px;max-width:100%;margin-left:auto;margin-right:auto}
 #foto-daniel + .legenda{text-align:center}
 .logos-band{display:block;width:min(94vw,1040px);max-width:none;height:auto;margin-left:50%;transform:translateX(-50%);margin-bottom:1.5em;border-radius:10px}
-.players-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-bottom:1.5em}
-.players-grid img{width:100%;height:auto;aspect-ratio:4/5;object-fit:cover;border-radius:10px;border:1px solid #2e2e2c;display:block}
+.players-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;width:min(94vw,900px);margin-left:50%;transform:translateX(-50%);margin-bottom:1.5em}
+.player{position:relative;margin:0;border-radius:10px;overflow:hidden;border:1px solid #2e2e2c;background:#232322}
+.player img{width:100%;height:auto;display:block}
+.player figcaption{position:absolute;left:0;right:0;bottom:0;padding:34px 10px 13px;background:linear-gradient(to top,rgba(0,0,0,.92),rgba(0,0,0,.42) 55%,transparent);color:#fff;font-family:'Oswald',sans-serif;text-transform:uppercase;font-weight:500;font-size:.92rem;letter-spacing:.02em;text-align:center;line-height:1.2}
+@media(max-width:560px){.player figcaption{font-size:.62rem;padding:24px 5px 9px;letter-spacing:0}}
 
 /* ---------- ELEMENTOS ESPECÍFICOS ---------- */
 .prova-grid{display:grid;grid-template-columns:1fr 1fr 1fr;gap:14px;margin-bottom:.4em}
@@ -156,7 +159,7 @@ footer{border-top:1px solid var(--divisor);margin-top:64px;padding:36px 0 48px}
     <li>2022: decidi atender só o jurídico — e recuso todo o resto desde então;</li>
     <li>Hoje: já temos mais de 20 teses jurídicas validadas fechando contrato e com ROI de 5x no mínimo.</li>
   </ul>
-  <img class="img-r" id="foto-daniel" src="img/daniel.jpg" alt="Daniel Padilha, fundador da Pongui" width="800" height="1000" loading="lazy" decoding="async">
+  <img class="img-r" id="foto-daniel" src="img/daniel.jpg" alt="Daniel Padilha, fundador da Pongui" width="800" height="1200" loading="lazy" decoding="async">
   <p class="legenda">Daniel Padilha — fundador da Pongui.</p>
   <p>Alguns dos parceiros que confiaram na Pongui:</p>
   <img class="logos-band" src="img/logos.png" alt="Logos de escritórios parceiros — são mais de 100 parceiros atendidos" width="1316" height="120" loading="lazy" decoding="async">
@@ -180,11 +183,10 @@ footer{border-top:1px solid var(--divisor);margin-top:64px;padding:36px 0 48px}
   <p>E uma regra minha: case de cliente não vira vitrine pra concorrente da mesma tese. Quando você for meu cliente, essa regra protege <b>você</b>.</p>
   <p>E não são só os escritórios que confiam — olha quem mais coloca o nome ao lado do nosso trabalho:</p>
   <div class="players-grid" id="players">
-    <img src="img/rayelle.jpg" alt="Dra. Rayelle Caroline" width="600" height="1066" loading="lazy" decoding="async">
-    <img src="img/vivian.jpg" alt="Dra. Vivian Padilha" width="600" height="1066" loading="lazy" decoding="async">
-    <img src="img/euro.jpg" alt="Dr. Euro Júnior" width="600" height="1066" loading="lazy" decoding="async">
+    <figure class="player"><img src="img/rayelle.jpg" alt="Dra. Rayelle Caroline" width="600" height="1066" loading="lazy" decoding="async"><figcaption>Dra. Rayelle Caroline</figcaption></figure>
+    <figure class="player"><img src="img/vivian.jpg" alt="Dra. Vivian Padilha" width="600" height="1066" loading="lazy" decoding="async"><figcaption>Dra. Vivian Padilha</figcaption></figure>
+    <figure class="player"><img src="img/euro.jpg" alt="Dr. Euro Júnior" width="600" height="1066" loading="lazy" decoding="async"><figcaption>Dr. Euro Júnior</figcaption></figure>
   </div>
-  <p class="legenda">Players que confiaram no nosso trabalho: Dra. Rayelle, Dra. Vivian e Dr. Euro.</p>
   <p>E quando não estou nas contas, estou ali no palco: eventos do mercado jurídico, falando das mesmas estratégias que rodam nos escritórios que você acabou de ver.</p>
   <img class="img-r" src="img/eventos.jpg" alt="Daniel Padilha palestrando em evento da OAB" width="1200" height="675" loading="lazy" decoding="async">
   <p>Bom — se você chegou até aqui, já sabe tudo que precisava saber. Falta só o próximo passo. Mas antes dele, um último aviso.</p>
