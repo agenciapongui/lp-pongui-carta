@@ -17,7 +17,7 @@
 <style>
 :root{
   --bg:#191919; --txt:#f0efed; --mudo:#9b9a97; --branco:#ffffff;
-  --callout:#383836; --divisor:rgba(255,255,235,.1); --vermelho:#cf5148;
+  --callout:#383836; --divisor:rgba(255,255,235,.1); --vermelho:#e0685e;
   --azul:#0064dc; --azul2:#1565c0;
 }
 *{margin:0;padding:0;box-sizing:border-box}
@@ -61,7 +61,7 @@ hr{border:0;height:1px;background:var(--divisor);margin-top:2.4em}
 .red-lista{counter-reset:no}
 
 /* ---------- BOTÃO (o azul real do site) ---------- */
-.btn{display:inline-block;font-family:'Ubuntu',sans-serif;font-weight:700;font-size:1.08rem;color:#fff;background:linear-gradient(180deg,var(--azul),var(--azul2));border:none;border-radius:13px;padding:16px 36px;text-decoration:none;text-align:center;cursor:pointer;transition:filter .18s}
+.btn{display:inline-block;font-family:'Ubuntu',sans-serif;font-weight:700;font-size:1.08rem;color:#fff;background:linear-gradient(180deg,#ff7a18,#f24d0c);border:none;border-radius:13px;padding:16px 36px;text-decoration:none;text-align:center;cursor:pointer;transition:filter .18s}
 .btn:hover{filter:brightness(1.15)}
 .btn:focus-visible{outline:3px solid #fff;outline-offset:3px}
 
@@ -93,16 +93,29 @@ footer{border-top:1px solid var(--divisor);margin-top:64px;padding:36px 0 48px}
 .foot{display:flex;justify-content:space-between;gap:24px;flex-wrap:wrap;font-size:.8rem;color:#7d7c79;line-height:1.7}
 .foot a{color:#9b9a97;text-decoration:none}
 .foot a:hover{color:#fff}
+.cta-sticky{display:none}
+@media(max-width:700px){
+  .cta-sticky{display:block;position:fixed;left:0;right:0;bottom:0;z-index:50;background:rgba(25,25,25,.94);backdrop-filter:blur(8px);border-top:1px solid var(--divisor);padding:10px 16px calc(10px + env(safe-area-inset-bottom))}
+  .cta-sticky .btn{display:block;width:100%;padding:15px 20px}
+  body{padding-bottom:80px}
+}
+.faq details{border-bottom:1px solid var(--divisor);padding:.2em 0}
+.faq summary{list-style:none;cursor:pointer;font-weight:700;color:var(--branco);padding:.9em 0;position:relative;padding-right:1.6rem}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::after{content:"+";position:absolute;right:0;top:.75em;color:var(--mudo);font-weight:700}
+.faq details[open] summary::after{content:"–"}
+.faq details p{padding:0 0 1em;margin:0}
 </style>
 </head>
 <body id="topo">
 
 <main class="carta">
 
-  <h1>Tudo que você precisa saber sobre o meu trabalho está nesta página.</h1>
+  <h1>Tráfego pago que vira contrato — feito por quem só atende advogado.</h1>
 
   <p>Deixa eu adivinhar: seu escritório fatura bem, você tem equipe — e tráfego pago você <b>já tentou</b>. Com agência ou por conta própria. O que voltou foi curioso no WhatsApp, relatório bonito de clique… e a sensação de dinheiro queimado. Até fechou um contrato ou outro, mas você sabe que dá pra muito mais do que isso.</p>
   <p>Nesta página eu vou te mostrar exatamente <b>por que foi assim</b> — e o que muda quando a campanha é feita por quem só atende advogado. Lê até o fim: quando a gente conversar, você já vai saber de tudo.</p>
+  <p style="margin-bottom:1.5em"><a class="btn js-cta" href="#formulario">QUERO MEU DIAGNÓSTICO GRATUITO</a></p>
 
   <hr>
 
@@ -163,6 +176,7 @@ footer{border-top:1px solid var(--divisor);margin-top:64px;padding:36px 0 48px}
     <div class="prova-item"><img class="img-r" src="img/case-4.jpg" alt="Print de WhatsApp: de 75 para 107 fechamentos em um mês" width="720" height="1280" loading="lazy" decoding="async"><p class="legenda">Cliente: advogado de trânsito</p></div>
   </div>
   <p>Não pedi avaliação "bonitinha" pra ninguém, tá? O que está aqui é print real e cliente real.</p>
+  <p style="text-align:center;margin-bottom:1.5em"><a class="btn js-cta" href="#formulario">QUERO MEU DIAGNÓSTICO GRATUITO</a></p>
   <p>E uma regra minha: case de cliente não vira vitrine pra concorrente da mesma tese. Quando você for meu cliente, essa regra protege <b>você</b>.</p>
   <p>E não são só os escritórios que confiam — olha quem mais coloca o nome ao lado do nosso trabalho:</p>
   <div class="players-grid" id="players">
@@ -188,36 +202,37 @@ footer{border-top:1px solid var(--divisor);margin-top:64px;padding:36px 0 48px}
     </ol>
     <p class="red"><em>(leia a lista vermelha antes de clicar)</em></p>
   </div>
-  <p style="text-align:center;margin-bottom:1.5em"><a class="btn" id="btn-forms" href="#formulario">FALE COMIGO</a></p>
+  <p style="text-align:center;margin-bottom:1.5em"><a class="btn js-cta" id="btn-forms" href="#formulario">QUERO MEU DIAGNÓSTICO GRATUITO</a></p>
 
   <hr>
 
   <p class="beat">❓ Ainda com uma dúvida na cabeça? Deve ser uma dessas:</p>
-  <p class="faq-q">Já tentei tráfego e não funcionou. Por que com vocês seria diferente?</p>
-  <p class="faq-r">Porque provavelmente ninguém tratou os três erros mais comuns em tráfego para advogado: anúncio genérico, otimização por clique e ausência de tese. E isso quem responde é o diagnóstico que eu faço nos seus números, antes de você decidir qualquer coisa. Se a sua conta anterior estava certa e o problema era outro, eu te falo isso também.</p>
-  <p class="faq-q">Não sei se o meu público está no Google e no Meta.</p>
-  <p class="faq-r">Está. Quem tem problema jurídico hoje pesquisa antes até de pedir indicação — o Google captura quem digita o problema; o Meta encontra quem tem o perfil de quem o vive. Em 4+ anos e 43 nichos mapeados, eu ainda não encontrei tese sem demanda digital — encontrei muita tese anunciada errado. E se o seu caso for a exceção, o diagnóstico mostra isso <b>antes</b> de você gastar um real. Eu te falo.</p>
-  <p class="faq-q">Vocês garantem resultado?</p>
-  <p class="faq-r">Não. E desconfia de quem garante. O que eu sustento com dado: piso de ROI 5× nas contas ativas, normalmente acima de 10 — e o caso fora da curva você já viu, com o devido aviso.</p>
-  <p class="faq-q">Eu preciso participar do projeto?</p>
-  <p class="faq-r">Precisa — mas calma, do operacional não: campanha, página, criativo e otimização são entrega minha. O que eu preciso de você são as decisões de tese, a validação da estratégia e um comercial atendendo rápido. Projeto de captação com dono ausente morre — e eu já vi morrer. Se o seu momento é de sumir por seis meses, melhor não começar.</p>
-  <p class="faq-q">Preciso gravar vídeo?</p>
-  <p class="faq-r">Não é obrigatório — rodamos com criativos de imagem feitos por nós. Vídeo performa melhor, então se topar gravar, você manda o material cru e corte, legenda e trilha são por minha conta.</p>
-  <p class="faq-q">Qual é o investimento?</p>
-  <p class="faq-r">Eu não passo preço em página, e o motivo é simples: o plano certo depende do diagnóstico do seu escritório. A conta que importa é outra: <b>quantos contratos por mês pagam o investimento inteiro.</b> Essa conta eu faço COM você, com os seus números de honorário, antes de você decidir qualquer coisa.</p>
+  <div class="faq">
+  <details><summary>Já tentei tráfego e não funcionou. Por que com vocês seria diferente?</summary><p>Porque provavelmente ninguém tratou os três erros mais comuns em tráfego para advogado: anúncio genérico, otimização por clique e ausência de tese. E isso quem responde é o diagnóstico que eu faço nos seus números, antes de você decidir qualquer coisa. Se a sua conta anterior estava certa e o problema era outro, eu te falo isso também.</p></details>
+  <details><summary>Não sei se o meu público está no Google e no Meta.</summary><p>Está. Quem tem problema jurídico hoje pesquisa antes até de pedir indicação — o Google captura quem digita o problema; o Meta encontra quem tem o perfil de quem o vive. Em 4+ anos e 43 nichos mapeados, eu ainda não encontrei tese sem demanda digital — encontrei muita tese anunciada errado. E se o seu caso for a exceção, o diagnóstico mostra isso <b>antes</b> de você gastar um real. Eu te falo.</p></details>
+  <details><summary>Vocês garantem resultado?</summary><p>Não. E desconfia de quem garante. O que eu sustento com dado: piso de ROI 5× nas contas ativas, normalmente acima de 10 — e o caso fora da curva você já viu, com o devido aviso.</p></details>
+  <details><summary>Eu preciso participar do projeto?</summary><p>Precisa — mas calma, do operacional não: campanha, página, criativo e otimização são entrega minha. O que eu preciso de você são as decisões de tese, a validação da estratégia e um comercial atendendo rápido. Projeto de captação com dono ausente morre — e eu já vi morrer. Se o seu momento é de sumir por seis meses, melhor não começar.</p></details>
+  <details><summary>Preciso gravar vídeo?</summary><p>Não é obrigatório — rodamos com criativos de imagem feitos por nós. Vídeo performa melhor, então se topar gravar, você manda o material cru e corte, legenda e trilha são por minha conta.</p></details>
+  <details><summary>Qual é o investimento?</summary><p>Eu não passo preço em página, e o motivo é simples: o plano certo depende do diagnóstico do seu escritório. A conta que importa é outra: <b>quantos contratos por mês pagam o investimento inteiro.</b> Essa conta eu faço COM você, com os seus números de honorário, antes de você decidir qualquer coisa.</p></details>
+  </div>
 
   <hr>
 
   <p>Sem mais dúvidas? Então agora é com você.</p>
   <p style="font-size:1.15rem"><b>Te espero do outro lado!</b><br>Um abraço, <b>Daniel.</b></p>
+  <p style="text-align:center;margin-bottom:1.5em"><a class="btn js-cta" href="#formulario">QUERO MEU DIAGNÓSTICO GRATUITO</a></p>
 
   <script>
-  /* URL do formulário interativo: preencher aqui quando existir */
+  /* URL do formulário interativo: preencher entre as aspas quando existir */
   var FORM_URL = "";
-  if (FORM_URL) { document.getElementById("btn-forms").href = FORM_URL; }
+  if (FORM_URL) {
+    document.querySelectorAll(".js-cta").forEach(function(a){ a.href = FORM_URL; });
+  }
   </script>
 
 </main>
+
+<div class="cta-sticky"><a class="btn js-cta" href="#formulario">QUERO MEU DIAGNÓSTICO GRATUITO</a></div>
 
 <footer>
   <div class="carta foot">
